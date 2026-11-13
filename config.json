@@ -1,0 +1,22 @@
+{
+  "hardware_enabled": false,
+  "wiring_verified": false,
+  "network": {"bind": "127.0.0.1", "port": 8080, "allowed_subnets": ["127.0.0.0/8"], "allowed_hosts": ["127.0.0.1:8080", "localhost:8080"]},
+  "safety": {"command_timeout_s": 0.35, "guard_timeout_s": 0.5, "feedback_timeout_s": 0.4, "pwm_slew_per_s": 0.5, "steering_slew_rad_s": 0.5, "reverse_pause_s": 0.15},
+  "drive": {
+    "supply_max_v": null, "pwm_limit": null, "pwm_hz": 1000,
+    "wheel_diameter_m": 0.075, "wheelbase_m": null, "max_speed_m_s": null,
+    "open_loop_m_s_at_full_pwm": null,
+    "pi_enabled": false, "kp": null, "ki": null,
+    "motors": [
+      {"name": "motor1", "pwm": [16, 20], "direction": 1, "encoder": [4, 14], "encoder_direction": 1, "counts_per_wheel_rev": null},
+      {"name": "motor2", "pwm": [21, 26], "direction": 1, "encoder": [15, 18], "encoder_direction": 1, "counts_per_wheel_rev": null}
+    ]
+  },
+  "servo": {"pin": 13, "supply_max_v": null, "min_us": null, "center_us": null, "max_us": null, "left_rad": null, "right_rad": null, "direction": 1},
+  "mt6701": {"a": 19, "b": 10, "z": 9, "counts_per_rev": null, "direction": 1, "index_offset_rad": 0.0},
+  "ultrasonic": {"enabled": false, "timeout_s": 0.03, "gap_s": 0.06, "min_cm": null, "max_cm": null, "pins": [[17, 27], [22, 23], [24, 25], [5, 6]]},
+  "odom": {"enabled": false, "rear_wheel_geometry_verified": false, "track_m": null, "left_motor": 0, "right_motor": 1},
+  "ros": {"socket": "runtime/ros.sock", "serial_port": "/dev/ttyUSB0", "laser_xyz_yaw": null, "freshness_s": 1.0, "max_map_cells": 2000000},
+  "auto_park": {"algorithm_installed": false, "commissioned": false, "obstacle_stop_cm": null}
+}

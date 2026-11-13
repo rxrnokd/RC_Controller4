@@ -1,0 +1,19 @@
+[Unit]
+Description=RC car local controller
+After=network-online.target pigpiod.service
+Wants=network-online.target
+Requires=pigpiod.service
+
+[Service]
+Type=simple
+User=RC_USER
+WorkingDirectory=/home/RC_USER/rc_lidar_docker/controller
+ExecStart=/home/RC_USER/rc_lidar_docker/controller/.venv/bin/python server.py
+Restart=on-failure
+RestartSec=2
+KillMode=mixed
+TimeoutStopSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

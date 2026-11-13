@@ -1,0 +1,9 @@
+.venv/
+.tools/
+tmp/
+runtime/
+__pycache__/
+*.pyc
+*.pdf
+*.png
+*.txt
